@@ -711,6 +711,9 @@ mysql_install_db() {
         command="${DB_BIN_DIR}/mysqld"
         args+=("--initialize-insecure")
     fi
+    if [[ -v SKIP_TEST_DB ]] && [[ "$SKIP_TEST_DB" == "true" ]]; then
+        args+=("--skip-test-db")
+    fi
     debug_execute "$command" "${args[@]}"
 }
 
