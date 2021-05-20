@@ -259,7 +259,7 @@ services:
   ...
 ```
 
-## Disable test databse
+## Disable creation of test database
 
 By default the MariaDB process create test database, in order to disable creation of test database "--skip-test-db" could be added on mysql_install_db process.
 This function is available on version equal or higher than 10.5 of mariadb.
